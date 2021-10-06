@@ -10,21 +10,32 @@ namespace Generics
         //TODO In your class create a property List called "Bin". Set the list type to "T".
         //TODO Create two more classes. One class called "Boxes". The second class called "Food". Both classes will conform to IStoreable interface.
         //TODO create two instances of type Storage in the Main method. First Instance will hold type "<Equipment>". The second instance will hold "<food>".
-        //TODO create some instanes of type Food and Equipment and Add them the correct storage bins.
-
-        
-
-
-
-
+        //TODO create some instances of type Food and Equipment and Add them the correct storage bins.
+       
         static void Main(string[] args)
-        {
+        {            
 
-           
+            var food1 = new Food();
+            var box1 = new Boxes();
+
+            var food2 = new Food();
+            var box2 = new Boxes();
+
+            var foodStorage = new Storage<Food>(food1, food2);
+            var boxStorage = new Storage<Boxes>(box1, box2);
 
 
+            var numbers = new int[] {3, 7, 25, 6 };
+            numbers = numbers.SortArray();
+            numbers.NumberPrinter();
+            //Console.WriteLine(numbers);
+
+            string name = "almond";
+            name = name.Pluralize();
+            Console.WriteLine(name);
 
         }
+      
       
 
         //ExtensionMethods
